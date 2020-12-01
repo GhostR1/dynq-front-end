@@ -36,6 +36,7 @@ export default {
       header: this.$t('login'),
       username_label: this.$t('username'),
       password_label: this.$t('password'),
+
       username: "",
       password: ""
     }
@@ -55,7 +56,7 @@ export default {
           .catch(err => {
             if (err.response) {
               if(err.response.status === 401) {
-                alert("Login or password are wrong! Please, try again!");
+                alert(this.$t('err-wrong-credentials'));
               } else if(err.response.status === 404) {
                 axios.post('http://localhost:3000/api/employee/sign-in', {
                   Email: this.username,
@@ -67,18 +68,18 @@ export default {
                     })
                     .catch(err => {
                       if (err.response) {
-                        alert("Login or password are wrong! Please, try again!");
+                        alert(this.$t('err-wrong-credentials'));
                       } else if (err.request) {
-                        alert("No connection with the server!")
+                        alert(this.$t('err-lost-connection'))
                       } else {
-                        alert("Something went wrong...")
+                        alert(this.$t('err-other'))
                       }
                     })
               }
             } else if (err.request) {
-              alert("No connection with the server!")
+              alert(this.$t('err-lost-connection'))
             } else {
-              alert("Something gone wrong...")
+              alert(this.$t('err-other'))
             }
           })
     }

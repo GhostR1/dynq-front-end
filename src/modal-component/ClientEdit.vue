@@ -83,7 +83,6 @@ export default {
           .then(response => {
             if(response.status === 200) {
               this.closeEditing()
-              alert("Client has been updated!")
               this.$router.go(0)
             }
           })
@@ -91,7 +90,7 @@ export default {
             if (err.response) {
               if (err.response.status === 500) {
                 this.closeEditing();
-                alert("Error occurred while editing!");
+                alert(this.$t('err-other'));
               }
             }
           })

@@ -14,7 +14,7 @@
               <b-form-input v-model="Text" required ></b-form-input>
             </b-form-group>
             <b-form-group  label-cols="4" label-cols-lg="4" :label="duration_label">
-              <b-form-input v-model="Duration" required></b-form-input>
+              <b-form-input type="number" v-model="Duration" required></b-form-input>
             </b-form-group>
             <b-form-group>
               <b-button
@@ -58,7 +58,6 @@ export default {
           .then(response => {
             if(response.status === 200) {
               this.closeAdding()
-              alert("Problem has been added!")
               this.$router.go(0)
             }
           })
@@ -66,7 +65,7 @@ export default {
             if (err.response) {
               if (err.response.status === 500) {
                 this.closeAdding();
-                alert("Error occurred while adding!");
+                alert(this.$t('err-other'));
               }
             }
           })

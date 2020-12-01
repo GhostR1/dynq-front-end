@@ -35,5 +35,9 @@
   "edit-client-label": "Редагувати клієнта",
 
   "add-problem-label": "Додати питання",
-  "edit-problem-label": "Редагувати питання"
+  "edit-problem-label": "Редагувати питання",
+
+  "err-wrong-credentials": "Логін або пароль є невірними. Спробуйте ще раз!",
+  "err-lost-connection'": "Зв'язок із сервером було встрачено",
+  "err-other": "Щось пішло не так..."
 }

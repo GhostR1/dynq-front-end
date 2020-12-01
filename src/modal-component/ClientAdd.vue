@@ -80,7 +80,6 @@ export default {
           .then(response => {
             if(response.status === 200) {
               this.closeAdding()
-              alert("Client has been added!")
               this.$router.go(0)
             }
           })
@@ -88,7 +87,7 @@ export default {
             if (err.response) {
               if (err.response.status === 500) {
                 this.closeAdding();
-                alert("Error occurred while adding!");
+                alert(this.$t('err-other'));
               }
             }
           })

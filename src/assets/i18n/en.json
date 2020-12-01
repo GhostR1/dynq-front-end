@@ -35,5 +35,9 @@
   "edit-client-label": "Edit the client",
 
   "add-problem-label": "Add a new problem",
-  "edit-problem-label": "Edit the problem"
+  "edit-problem-label": "Edit the problem",
+
+  "err-wrong-credentials": "Login or password are wrong! Please, try again!",
+  "err-lost-connection'": "No connection with the server!",
+  "err-other": "Something went wrong..."
 }

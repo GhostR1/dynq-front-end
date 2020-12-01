@@ -49,7 +49,6 @@ export default {
   data() {
     return {
       isEditVisible: false,
-      Status: "asd"
     }
   },
   props: {
@@ -66,11 +65,6 @@ export default {
     },
     closeEditing() {
       this.isEditVisible = false
-    }
-  },
-  computed: {
-    getStatus() {
-      return this.$props.client_data.Status === "-" ? "IN" : "OUT"
     }
   }
 }

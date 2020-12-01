@@ -83,15 +83,14 @@ export default {
           .then(response => {
             if(response.status === 200) {
               this.closeEditing()
-              alert("Employee has been updated!")
-              this.$router.go()
+              this.$router.go(0)
             }
           })
           .catch(err => {
             if (err.response) {
               if (err.response.status === 500) {
                 this.closeEditing();
-                alert("Error occurred while editing!");
+                alert(this.$t('err-other'));
               }
             }
           })

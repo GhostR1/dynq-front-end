@@ -55,14 +55,13 @@ export default {
               this.$props.problem_data._id)
           .then(response => {
             if(response.status === 200) {
-              alert("Problem has been removed!")
               this.$router.go(0)
             }
           })
           .catch(err => {
             if (err.response) {
               if (err.response.status === 500) {
-                alert("Error occurred while deleting!");
+                alert(this.$t('err-other'));
               }
             }
           })
