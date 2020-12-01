@@ -63,7 +63,7 @@ export default {
                   Password: this.password
                 })
                     .then(response => {
-                      localStorage.jwt = response.data
+                      localStorage.jwt = response.data.token
                       this.$router.push('./employee')
                     })
                     .catch(err => {

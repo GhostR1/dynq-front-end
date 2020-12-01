@@ -22,6 +22,7 @@
 import NavBar from "@/components/NavbarAdmin";
 import EmployeeCard from "@/components/EmployeeCard";
 import EmployeeAdd from "@/modal-component/EmployeeAdd";
+import JWT from 'jsonwebtoken'
 
 import axios from "axios";
 export default {
@@ -29,7 +30,7 @@ export default {
   data() {
     return {
       employees: [],
-      idEst: "5fb05ca6836a4c27a48c82ee",
+      idEst: JWT.decode(localStorage.jwt).estId,
       isAddVisible: false
     }
   },

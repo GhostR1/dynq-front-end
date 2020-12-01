@@ -32,6 +32,12 @@ const router = new Router( {
             name: 'admin-problem',
             meta: {layout: 'admin-problem', requireAuth: true},
             component: () => import('./views/Admin-problem')
+        },
+        {
+            path: '/employee',
+            name: 'employee',
+            meta: {layout: 'employee', requireAuth: true},
+            component: () => import('./views/Employee')
         }
     ]
 })

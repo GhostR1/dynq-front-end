@@ -21,6 +21,7 @@
 import NavBar from "@/components/NavbarAdmin";
 import ProblemAdd from "@/modal-component/ProblemAdd";
 import ProblemCard from "@/components/ProblemCard";
+import JWT from "jsonwebtoken"
 
 import axios from "axios";
 
@@ -29,7 +30,7 @@ export default {
   data() {
     return {
       problems: [],
-      idEst: "5fb05ca6836a4c27a48c82ee",
+      idEst: JWT.decode(localStorage.jwt).estId,
       isAddVisible: false
     }
   },

@@ -4,7 +4,9 @@
   "username": "Username",
   "password": "Password",
 
+  "employee-page": "Employee page",
   "admin-page": "Admin page",
+
   "employees": "Employees",
   "clients": "Clients",
   "problems": "Problems",
@@ -21,6 +23,7 @@
   "phone": "Phone",
   "status": "Status",
 
+  "full-name": "Full name",
   "text": "Text",
   "duration": "Duration",
 
@@ -40,4 +43,5 @@
   "err-wrong-credentials": "Login or password are wrong! Please, try again!",
   "err-lost-connection'": "No connection with the server!",
   "err-other": "Something went wrong..."
+
 }
