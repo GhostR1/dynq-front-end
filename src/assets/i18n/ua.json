@@ -1,0 +1,39 @@
+{
+  "login": "Авторизація",
+  "sign-in": "Увійти",
+  "username": "Ім'я користувача",
+  "password": "Пароль",
+
+  "admin-page": "Сторінка адміністратора",
+  "employees": "Співробітники",
+  "clients": "Клієнти",
+  "problems": "Питання",
+  "language": "Мова",
+  "english": "English",
+  "ukrainian": "Українська",
+  "logout": "Вийти",
+
+  "number": "Номер",
+  "name": "Ім'я",
+  "surname": "Прізвище",
+  "second-name": "По-батькові",
+  "email": "Пошта",
+  "phone": "Телефон",
+  "status": "Стан",
+
+  "text": "Текст",
+  "duration": "Тривалість",
+
+  "edit": "Редагувати",
+  "remove": "Видалити",
+  "submit": "Підтвердити",
+
+  "add-employee-label": "Додати співробітника",
+  "edit-employee-label": "Редагувати співробітника",
+
+  "add-client-label": "Додати клієнта",
+  "edit-client-label": "Редагувати клієнта",
+
+  "add-problem-label": "Додати питання",
+  "edit-problem-label": "Редагувати питання"
+}

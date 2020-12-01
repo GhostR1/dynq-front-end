@@ -6,30 +6,35 @@
         <b-card header-bg-variant="dark"
                 header-text-variant="white">
           <template #header>
-              <b-navbar-brand >Add a new employee</b-navbar-brand>
+              <b-navbar-brand >{{ $t('add-employee-label') }}</b-navbar-brand>
               <b-button-close v-on:click="closeAdding" text-variant="white"/>
           </template>
           <b-form @submit="onSubmit">
-            <b-form-group label-cols="4" label-cols-lg="4" label="Name" label-for="input-name">
+            <b-form-group label-cols="4" label-cols-lg="4" :label="name_label">
               <b-form-input v-model="Name" required ></b-form-input>
             </b-form-group>
-            <b-form-group  label-cols="4" label-cols-lg="4" label="Surname" label-for="input-name">
+            <b-form-group  label-cols="4" label-cols-lg="4" :label="surname_label">
               <b-form-input v-model="Surname" required></b-form-input>
             </b-form-group>
-            <b-form-group  label-cols="4" label-cols-lg="4" label="Second name" label-for="input-name">
+            <b-form-group  label-cols="4" label-cols-lg="4" :label="second_name_label">
               <b-form-input v-model="SecondName" required></b-form-input>
             </b-form-group>
-            <b-form-group  label-cols="4" label-cols-lg="4" label="Email" label-for="input-name">
+            <b-form-group  label-cols="4" label-cols-lg="4" :label="email_label">
               <b-form-input v-model="Email" required></b-form-input>
             </b-form-group>
-            <b-form-group  label-cols="4" label-cols-lg="4" label="Password" label-for="input-name">
+            <b-form-group  label-cols="4" label-cols-lg="4" :label="password_label">
               <b-form-input v-model="Password" required></b-form-input>
             </b-form-group>
-            <b-form-group label-cols="4" label-cols-lg="4" label="Number" label-for="input-name">
+            <b-form-group label-cols="4" label-cols-lg="4" :label="number_label">
               <b-form-input v-model="EmpNum" required ></b-form-input>
             </b-form-group>
             <b-form-group>
-              <b-button style="width:100%; margin-top: 40px;" type="submit" :variant="acceptableVerificationStyle" :disabled="acceptableVerification">Submit</b-button>
+              <b-button
+                  style="width:100%; margin-top: 40px;" type="submit"
+                  :variant="acceptableVerificationStyle"
+                  :disabled="acceptableVerification">
+                {{ $t('submit') }}
+              </b-button>
             </b-form-group>
           </b-form>
         </b-card>
@@ -44,6 +49,13 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      name_label: this.$t('name'),
+      surname_label: this.$t('surname'),
+      second_name_label: this.$t('second-name'),
+      email_label: this.$t('email'),
+      password_label: this.$t('password'),
+      number_label: this.$t('number'),
+
       estId: "5fb05ca6836a4c27a48c82ee",
       Name: "",
       Surname: "",

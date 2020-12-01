@@ -6,23 +6,23 @@
         <b-card header-bg-variant="dark"
                 header-text-variant="white">
           <template #header>
-            <b-navbar-brand >Edit the employee</b-navbar-brand>
+            <b-navbar-brand >{{ $t('edit-employee-label') }}</b-navbar-brand>
             <b-button-close v-on:click="closeEditing" text-variant="white"/>
           </template>
           <b-form @submit="onSubmit">
-            <b-form-group label-cols="4" label-cols-lg="4" label="Name">
+            <b-form-group label-cols="4" label-cols-lg="4" :label="name_label">
               <b-form-input v-model="Name" required />
             </b-form-group>
-            <b-form-group  label-cols="4" label-cols-lg="4" label="Surname">
+            <b-form-group  label-cols="4" label-cols-lg="4" :label="surname_label">
               <b-form-input v-model="Surname" required/>
             </b-form-group>
-            <b-form-group  label-cols="4" label-cols-lg="4" label="Second name">
+            <b-form-group  label-cols="4" label-cols-lg="4" :label="second_name_label">
               <b-form-input v-model="SecondName" required/>
             </b-form-group>
-            <b-form-group  label-cols="4" label-cols-lg="4" label="Email">
+            <b-form-group  label-cols="4" label-cols-lg="4" :label="email_label">
               <b-form-input v-model="Email" required/>
             </b-form-group>
-            <b-form-group label-cols="4" label-cols-lg="4" label="Number">
+            <b-form-group label-cols="4" label-cols-lg="4" :label="number_label">
               <b-form-input v-model="EmpNum" required/>
             </b-form-group>
             <b-form-group>
@@ -31,7 +31,7 @@
                   type="submit"
                   :variant="acceptableVerificationStyle"
                   :disabled="acceptableVerification">
-                Submit
+                {{ $t('submit') }}
               </b-button>
             </b-form-group>
           </b-form>
@@ -47,6 +47,12 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      name_label: this.$t('name'),
+      surname_label: this.$t('surname'),
+      second_name_label: this.$t('second-name'),
+      email_label: this.$t('email'),
+      number_label: this.$t('number'),
+
       Name: this.$props.employee_data.Name,
       Surname: this.$props.employee_data.Surname,
       SecondName: this.$props.employee_data.SecondName,

@@ -3,20 +3,21 @@
     <b-container style="width: 600px; margin-top: 200px;">
       <b-row class="justify-content-md-center mt-4">
         <b-col col md="8">
-          <b-card header="Login"
+          <b-card :header="header"
                   header-bg-variant="dark"
                   header-text-variant="white">
             <b-form @submit="onSubmit">
               <b-form-group
-                label="Username">
+                :label="username_label">
                 <b-form-input v-model="username" required></b-form-input>
               </b-form-group>
               <b-form-group
-                  label="Password">
+                  :label="password_label">
                 <b-form-input v-model="password" type="password" required></b-form-input>
               </b-form-group>
               <b-form-group>
-                <b-button style="width:100%; margin-top: 40px;" type="submit" :variant="acceptableVerificationStyle" :disabled="acceptableVerification">Sign In</b-button>
+                <b-button style="width:100%; margin-top: 40px;" type="submit" :variant="acceptableVerificationStyle" :disabled="acceptableVerification">
+                  {{ $t('sign-in') }}</b-button>
               </b-form-group>
             </b-form>
           </b-card>
@@ -32,6 +33,9 @@ import axios from "axios"
 export default {
   data() {
     return {
+      header: this.$t('login'),
+      username_label: this.$t('username'),
+      password_label: this.$t('password'),
       username: "",
       password: ""
     }

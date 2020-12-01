@@ -8,15 +8,15 @@
 
     <b-card class="mb-2" style="max-width: 20rem; margin: 1rem">
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Text:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('text') }}:</b-card-text>
         <b-card-text>{{ problem_data.Text }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Duration:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('duration') }}:</b-card-text>
         <b-card-text>{{ problem_data.Duration }}</b-card-text>
       </b-card-group>
-      <b-button v-on:click="edit_problem" variant="dark" style="margin: 0.2rem;">Edit</b-button>
-      <b-button v-on:click="remove_problem" variant="dark" style="margin: 0.2rem;">Remove</b-button>
+      <b-button v-on:click="edit_problem" variant="dark" style="margin: 0.2rem;">{{ $t('edit') }}</b-button>
+      <b-button v-on:click="remove_problem" variant="dark" style="margin: 0.2rem;">{{ $t('remove') }}</b-button>
     </b-card>
   </div>
 </template>

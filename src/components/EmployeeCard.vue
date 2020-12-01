@@ -8,28 +8,28 @@
 
     <b-card class="mb-2" style="max-width: 20rem; margin: 1rem">
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Number:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('number') }}:</b-card-text>
         <b-card-text>{{ employee_data.EmpNum }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Name:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('name') }}:</b-card-text>
         <b-card-text>{{ employee_data.Name }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Surname:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('surname') }}:</b-card-text>
         <b-card-text>{{ employee_data.Surname }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Second name:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('second-name') }}:</b-card-text>
         <b-card-text>{{ employee_data.SecondName }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Email:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('email') }}:</b-card-text>
         <b-card-text>{{ employee_data.Email }}</b-card-text>
       </b-card-group>
 
-      <b-button v-on:click="edit_employee" variant="dark" style="margin: 0.2rem;">Edit</b-button>
-      <b-button v-on:click="remove_employee" variant="dark" style="margin: 0.2rem;">Remove</b-button>
+      <b-button v-on:click="edit_employee" variant="dark" style="margin: 0.2rem;">{{ $t('edit') }}</b-button>
+      <b-button v-on:click="remove_employee" variant="dark" style="margin: 0.2rem;">{{ $t('remove') }}</b-button>
     </b-card>
   </div>
 </template>

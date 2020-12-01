@@ -1,0 +1,39 @@
+{
+  "login": "Login",
+  "sign-in": "Sign In",
+  "username": "Username",
+  "password": "Password",
+
+  "admin-page": "Admin page",
+  "employees": "Employees",
+  "clients": "Clients",
+  "problems": "Problems",
+  "language": "Language",
+  "english": "English",
+  "ukrainian": "Українська",
+  "logout": "Logout",
+
+  "number": "Number",
+  "name": "Name",
+  "surname": "Surname",
+  "second-name": "Second name",
+  "email": "Email",
+  "phone": "Phone",
+  "status": "Status",
+
+  "text": "Text",
+  "duration": "Duration",
+
+  "edit": "Edit",
+  "remove": "Remove",
+  "submit": "Submit",
+
+  "add-employee-label": "Add a new employee",
+  "edit-employee-label": "Edit the employee",
+
+  "add-client-label": "Add a new client",
+  "edit-client-label": "Edit the client",
+
+  "add-problem-label": "Add a new problem",
+  "edit-problem-label": "Edit the problem"
+}

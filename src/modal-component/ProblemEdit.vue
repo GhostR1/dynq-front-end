@@ -6,14 +6,14 @@
         <b-card header-bg-variant="dark"
                 header-text-variant="white">
           <template #header>
-            <b-navbar-brand >Edit the problem</b-navbar-brand>
+            <b-navbar-brand >{{ $t('edit-problem-label') }}</b-navbar-brand>
             <b-button-close v-on:click="closeEditing" text-variant="white"/>
           </template>
           <b-form @submit="onSubmit">
-            <b-form-group label-cols="4" label-cols-lg="4" label="Text">
+            <b-form-group label-cols="4" label-cols-lg="4" :label="text_label">
               <b-form-input v-model="Text" required />
             </b-form-group>
-            <b-form-group  label-cols="4" label-cols-lg="4" label="Duration">
+            <b-form-group  label-cols="4" label-cols-lg="4" :label="duration_label">
               <b-form-input v-model="Duration" required/>
             </b-form-group>
             <b-form-group>
@@ -22,7 +22,7 @@
                   type="submit"
                   :variant="acceptableVerificationStyle"
                   :disabled="acceptableVerification">
-                Submit
+                {{ $t('submit') }}
               </b-button>
             </b-form-group>
           </b-form>
@@ -38,6 +38,9 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      text_label: this.$t('text'),
+      duration_label: this.$t('duration'),
+
       Text: this.$props.problem_data.Text,
       Duration: this.$props.problem_data.Duration,
     }

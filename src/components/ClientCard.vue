@@ -9,31 +9,31 @@
 
     <b-card class="mb-2" style="max-width: 20rem; margin: 1rem">
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Name:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('name') }}:</b-card-text>
         <b-card-text>{{ client_data.Name }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Surname:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('surname') }}:</b-card-text>
         <b-card-text>{{ client_data.Surname }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Second name:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('second-name') }}:</b-card-text>
         <b-card-text>{{ client_data.SecondName }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Email:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('email') }}:</b-card-text>
         <b-card-text>{{ client_data.Email }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Phone:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('phone') }}:</b-card-text>
         <b-card-text>{{ client_data.Phone }}</b-card-text>
       </b-card-group>
       <b-card-group>
-        <b-card-text style="margin-right: 5px;">Status:</b-card-text>
+        <b-card-text style="margin-right: 5px;">{{ $t('status') }}:</b-card-text>
         <b-card-text>{{ client_data.Status }}</b-card-text>
       </b-card-group>
 
-      <b-button v-on:click="edit_client" variant="dark" style="width:100%; margin: 0.2rem;">Edit</b-button>
+      <b-button v-on:click="edit_client" variant="dark" style="width:100%; margin: 0.2rem;">{{ $t('edit') }}</b-button>
     </b-card>
   </div>
 </template>
