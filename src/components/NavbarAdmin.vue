@@ -13,7 +13,6 @@
           <b-nav-item v-on:click="move_to_problem" right>Problems</b-nav-item>
         </b-navbar-nav>
 
-        <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item-dropdown text="Language" right>
             <b-dropdown-item href="#">EN</b-dropdown-item>
