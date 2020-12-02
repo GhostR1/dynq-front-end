@@ -30,7 +30,7 @@
       </b-card-group>
       <b-card-group>
         <b-card-text style="margin-right: 5px;">{{ $t('status') }}:</b-card-text>
-        <b-card-text v-text="setStatus" :class="checkStatus">Disabled</b-card-text>
+        <b-card-text :class="checkStatus">{{ client_data.Status }}</b-card-text>
       </b-card-group>
 
       <b-button v-on:click="edit_client" variant="dark" style="width:100%; margin: 0.2rem;">{{ $t('edit') }}</b-button>
@@ -49,6 +49,11 @@ export default {
   data() {
     return {
       isEditVisible: false,
+      Status: {
+        out : "danger",
+        started : "success",
+        waiting : "info"
+      }
     }
   },
   props: {
@@ -69,10 +74,13 @@ export default {
   },
   computed: {
     checkStatus() {
-      return this.$props.client_data.Status === "-" ? "text-danger" : "text-success"
-    },
-    setStatus() {
-      return this.$props.client_data.Status === "-" ? "OUT" : "IN"
+      if(this.$props.client_data.Status === "Started") {
+        return "text-success";
+      } else if(this.$props.client_data.Status === "Waiting") {
+        return "text-info";
+      } else {
+        return "text-danger"
+      }
     }
   }
 }

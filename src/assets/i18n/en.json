@@ -42,6 +42,11 @@
 
   "err-wrong-credentials": "Login or password are wrong! Please, try again!",
   "err-lost-connection'": "No connection with the server!",
-  "err-other": "Something went wrong..."
+  "err-other": "Something went wrong...",
 
+  "empty-queue": "There are no queue yet!",
+
+  "start": "Start",
+  "done": "Done",
+  "cancel": "Cancel"
 }

@@ -41,6 +41,7 @@ const router = new Router( {
         }
     ]
 })
+
 router.beforeEach((to, from, next) => {
     const isAuth = to.matched.some(record => record.meta.isAuth)
     if(isAuth) {
